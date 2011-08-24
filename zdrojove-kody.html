@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <title>Sémantika - Zdrojové kódy</title>
+  <meta name="description" content="Jakými značkami zapsat zdrojový kód nějakého programu nebo webové stránky">
+  <link rel="home" href="index.html/">
+  <link rel="prev" href="citace-zkratky.html">
+  <link rel="next" href="logicke-formatovani.html">
+  <link rel="up" href="navody.html">
+  <link rel="stylesheet" href="styly.css">
+  </head>
+  <body>
+<h1><a href="index.html" id="nadpis">Sémantika <br> pravý význam html značek</a></h1>
+
+<p id="drobky"><a href="index.html">Hlavní strana</a> &raquo; <a href="navody.html">Návody</a> &raquo; Zdrojové kódy</p>
+
+<h2 id="obsah">Zdrojové kódy</h2>
+
+<h3 id="pocitacovy">Počítačový kód</h3>
+<p>Pokud máte někde na webu nějakou ukázku kódu (je už jedno, jestli to je <abbr title="HyperText markup language - Hypertextový značkovací jazyk">HTML</abbr> nebo nějaký starý pascal), měl by být vložen do značky <code>&lt;code&gt;</code>. Prohlížeč ho pak bude chápat jako zdrojový kód něčeho. Žádné další významné atributy tato značka nemá. Ještě pozor na to, že prohlížeče obvykle vykreslí obsah značky menším písmem. Často se ovšem kombinuje se značkou <code>&lt;pre&gt;</code>, která zaručí, že budou ponechány a prohlížečem interpretovány bílé mezery. Toho samého efektu lze docílit pomocí kaskádových stylů, ale nejbezpečnější a nejsémantičtější možnost je za pomocí této značky. Takže sémantický zápis zdrojového kódu by vypadal asi takhle:</p>
+<pre><code>&lt;pre&gt;
+  &lt;code&gt;
+    <font class="text">&amp;lt;em&amp;gt;William Shakespeare&amp;lt;/em&amp;gt;</font>
+  &lt;/code&gt;
+&lt;/pre&gt;
+</code></pre>
+
+<h3 id="vystup">Výstup kódu</h3>
+<p>Předchozí značka <code>&lt;code&gt;</code> sloužila k zapsání kódu, který běží v nějakém programu. Částečným opakem je značka <code>&lt;samp&gt;</code>, ve které se vyskytuje obsah, který nám daný program vyplivl. Neboli odbrodněji - měla by obsahovat <em>výstup nějakého kódu</em>. Pokud je výstupem předchozího příkladu text psaný kurzívou (respektive důležitý text), měla by značka <code>&lt;samp&gt;</code> obsahovat text psaný kurzívou:</p>
+<pre><code>&lt;samp&gt;
+  &lt;em&gt;
+    <font class="text">William Shakespeare</font>
+  &lt;/em&gt;
+&lt;/samp&gt;
+</code></pre>
+<p>V samotném prohlížeči by se pak zobrazilo něco takového: <samp><em>William Shakespeare</em></samp>.</p>
+
+<h3 id="vstup">Vstupní hodnoty</h3>
+<p>Opět v souvislosti s předchozí značkou je třeba zmínit ještě jednu a to <code>&lt;kbd&gt;</code>, která slouží k indikaci vstupního textu (tj. text, který uživatel musí sám napsat na klávesnici) do nějakého programu či třeba formuláře. Jedná se o dosti opomíjený a nepoužívaný tag. Příklad použití:</p>
+<pre><code>&lt;p&gt;<font class="text">Do následující kolonky vepište</font> &lt;kbd&gt;<font class="text">email</font>&lt;/kbd&gt;<font class="text">:</font>&lt;/p&gt;
+</code></pre>
+<p>Pozor! <strong>Neplést s popiskem formuláře</strong> (<code>&lt;label&gt;</code>), <code>&lt;kbd&gt;</code> se spíše používá spíše v nějakých příručkách či delších popiscích.</p>
+
+<h3 id="promenna">Proměnná</h3>
+<p>Pokud chcete správně vyznačit proměnnou, použitje značku <code>&lt;var&gt;</code>. Může se pochopitelně jednat o proměnnou jakéhokoliv programovacího jazyka. Takže jednoduchý příklad:</p>
+<pre><code>&lt;p&gt;
+  <font class="text">Do proměnné</font> &lt;var&gt;<font class="text">$vysledek</font>&lt;/var&gt; <font class="text">uložte vypočítanou hodnotu.</font>
+&lt;/p&gt;
+</code></pre>
+
+<menu id="hlavni-menu">
+<li><a href="index.html">Hlavní strana</a></li>
+<li><a href="navody.html">Návody</a></li>
+<li><a href="download.html">Download</a></li>
+<li><a href="odkazy-zdroje.html">Odkazy</a></li>
+<li><a href="kontakt.html">Kontakt</a></li>
+</menu>
+
+<p id="odkazy"><a href="citace-zkratky.html">&laquo;&laquo; Citace a zkratky</a> <a href="navody.html" id="rozcestnik">&raquo; rozcestník &laquo;</a> <a href="logicke-formatovani.html">Logické formátování &raquo;&raquo;</a></p>
+
+<p id="paticka"><small>o web se stará Lukáš Havrlant (<a href="kontakt.html">kontakt</a>)</small></p>
+
+
+
+  </body>
+</html>

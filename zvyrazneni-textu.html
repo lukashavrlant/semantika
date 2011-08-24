@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <title>Sémantika - Zvýraznění textu</title>
+  <meta name="description" content="Jakým způsobem nejlépe zvýraznit část textu, kdy použít značku strong a kdy značku b">
+  <link rel="home" href="index.html/">
+  <link rel="prev" href="zakladni-kostra-stranky.html">
+  <link rel="next" href="uprava-textu.html">
+  <link rel="up" href="navody.html">
+  <link rel="stylesheet" href="styly.css">
+  </head>
+  <body>
+<h1><a href="index.html" id="nadpis">Sémantika <br> pravý význam html značek</a></h1>
+
+
+<p id="drobky"><a href="index.html">Hlavní strana</a> &raquo; <a href="navody.html">Návody</a> &raquo; Zvýraznění textu</p>
+
+<h2 id="obsah">Zvýraznění textu</h2>
+
+<h3 id="rozdil">Rozdíl mezi <code>&lt;b&gt;</code> a <code>&lt;strong&gt;</code></h3>
+<p>Může se zdát, že mezi těmito značkami není vlastně žádný rozdíl. Snad všechny prohlížeče obsah těchto elementů vykreslí tučným písmem a přesto mezi nimi rozdíl je. Značka <code>&lt;b&gt;</code> totiž slouží k vymezení textu, který má být <b>tučný</b>, kdežto značka <code>&lt;strong&gt;</code> vymezuje <strong>důležitý</strong> či silně zvýrazněný text (nenechte se zmást, na tomto webu mám značku <code>&lt;strong&gt;</code> přestylovanou na zeleno, bez stylů se zobrazí stejně).</p>
+<p>Takže pokud budete chtít vyzdvihnout důležitost nějakého slova, použijete značku <code>&lt;strong&gt;</code>, ale pokud budete chtít udělat text tučný, ale přitom rovnocenný s ostatními texty, použijete na to kaskádové styly, které byly k tomuto účelu navrhnuty. V případě, kdy je vysloveně řečeno, že daný úsek <strong>musí</strong> být <em>tučný</em> (například je to ustálený standardní zápis - většinou se s tím setkáte třeba v matematice nebo ve fyzice), můžete použít značku <code>&lt;b&gt;</code>.</p>
+<p>Vše ještě ukáži na příkladu, to bývá obvykle nejlepší. Takže máme větu <em>&bdquo;Každý stý návštěvník má vstup zdarma&rdquo;</em>. Jelikož poslední dvě slova jsou více než důležitá, vložím je do značky <code>&lt;strong&gt;</code> a výstup tedy bude vypadat takto: <samp>&bdquo;Každý stý návštěvník má <strong>vstup zdarma</strong>&rdquo;</samp>. Nyní se podívejte na menu nahoře. Odkazy v něm jsou zobrazovány tučným písmem. Vzhledem k tomu, že jsem necítil potřebu zdůrazňovat odkazy v hlavním menu, ale pouze je udělat tučné, jelikož normální (netučné) vypadaly fakt strašně, použil jsem <abbr title="Cascading Style Sheets - Kaskádové styly">CSS</abbr> vlastnost <code>font-weight:bold;</code> namísto značky <code>&lt;strong&gt;</code> či <code>&lt;b&gt;</code>. Pokud se ale vektory obvykle zapisují tučným písmem, vypadal by správný zápis vektoru takto: <code><font class="text">Vektor</font> &lt;b&gt;<font class="text">v</font>&lt;/b&gt; <font class="text">vynásobíme třemi</font>.</code></p>
+
+<h3 id="dalsi">Další možností zvýraznění</h3>
+<p>Kromě značky <code>&lt;strong&gt;</code> existuje ještě element <code>&lt;em&gt;</code>, který slouží ke stejnému účelu. Rozdíl mezi značkou <code>&lt;strong&gt;</code> a <code>&lt;em&gt;</code> je ten, že <code>&lt;strong&gt;</code> je důležitější, dává na slovo větší důraz. Žádný jiný sémantický rozdíl mezi nimi není. V prohlížeči se pak <code>&lt;em&gt;</code> obvykle vykreslí kurzívou. Rozdíl mezi <code>&lt;em&gt;</code> a <code>&lt;i&gt;</code> je v podstatě stejný jako rozdíl, který jsem vysvětlil v předchozí kapitole. Značka <code>&lt;i&gt;</code> nemá sémantický význam. Pouze vykreslí obsah kurzívou, nic víc neurčuje.</p>
+<p>Pamatujte, že i tyto elementy můžete stylovat a tak pokud chcete například nějaký text zdůraznit změnou barvy, není to vůbec žádný problém. Ve stylech stačí použít přibližně takovýto předpis: <code>strong{color:#f00}</code>. Všechny důležité texty nyní budou zobrazeny červenou barvou. Samozřejmě můžete opět použít třídy či identifikátory.</p>
+
+<h3 id="zeslabeni">Zeslabení důrazu</h3>
+<p>Toto je trochu zvláštnost, protože <abbr title="HyperText markup language - Hypertextový značkovací jazyk">HTML</abbr> má sice dvě značky na zesílení důrazu, ale ani jeden na <strong>zeslabení důrazu</strong>, což je trochu škoda. Jediná značka, která má podobný účel, je <code>&lt;small&gt;</code>. Jenže u ní je ten problém, že vlastně nemá sémantický význam, je to podobný problém jako třeba s <code>&lt;b&gt;</code>. Leč bohužel, jiná možnost prozatím neexistuje, takže pokud budete chtít zeslabit důraz nějaké části textu, použijte tento element. Já jej kupříkladu používám pro patičku. Není to sice zrovna sémantický vrchol, ale je to pořád lepší, než na méně důležitý text použít <code>&lt;span&gt;</code>, který potom pouze nějak nastylovat.</p>
+
+<menu id="hlavni-menu">
+<li><a href="index.html">Hlavní strana</a></li>
+<li><a href="navody.html">Návody</a></li>
+<li><a href="download.html">Download</a></li>
+<li><a href="odkazy-zdroje.html">Odkazy</a></li>
+<li><a href="kontakt.html">Kontakt</a></li>
+</menu> 
+
+<p id="odkazy"><a href="zakladni-kostra-stranky.html">&laquo;&laquo; Základní kostra stránky</a> <a href="navody.html" id="rozcestnik">&raquo; rozcestník &laquo;</a> <a href="uprava-textu.html">Úprava textu &raquo;&raquo;</a></p>
+ 
+<p id="paticka"><small>o web se stará Lukáš Havrlant (<a href="kontakt.html">kontakt</a>)</small></p>
+
+
+
+  </body>
+</html>

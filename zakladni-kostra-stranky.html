@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <title>Sémantika - Základní kostra stránky</title>
+  <meta name="description" content="Jak by měla vypadat hlavní kostra webové stránky">
+  <link rel="home" href="index.html/">
+  <link rel="next" href="zvyrazneni-textu.html">
+  <link rel="prev" href="uvod-semantika.html">
+  <link rel="up" href="navody.html">
+  <link rel="stylesheet" href="styly.css">
+  </head>
+  <body>
+<h1><a href="index.html" id="nadpis">Sémantika <br> pravý význam html značek</a></h1>
+
+
+<p id="drobky"><a href="index.html">Hlavní strana</a> &raquo; <a href="navody.html">Návody</a> &raquo; Základní kostra stránky</p>
+
+<h2 id="obsah">Základní kostra stránky</h2>
+
+<h3 id="nejjednodussi">Nejjednodušší stránka</h3>
+<p>V <abbr title="Extensible HyperText Markup Language - rozšířitelný hypertextový značkovací jazyk">XHTML</abbr> musí být (narozdíl od <abbr title="HyperText Markup Language - hypertextový značkovací jazyk">HTML</abbr>) kořenovým elementem značka <code>&lt;html&gt;</code>. Sémantický dokument by měl touto značkou začínat vždy, čímž v podstatě definujeme, že všechno mezi těmito značkami má být součástí webové stránky. V drtivé většině stránek se tato značka objevuje, což je jenom dobře.
+<p>Poté by měla následovat značka <code>&lt;head&gt;</code>, ve které definujeme hlavičku dokumentu. Právě zde by se měly nacházet informace, které nenesou pro uživatele prohlížející si stránky prakticky žádnou informační hodnotu. To znamená meta-tagy, odkazy na externí styly či skripty apod. Jedinou výjimku tvoří značka <code>&lt;title&gt;</code>, která obsahuje stručný popisek dané webové stránky a kterou uživatel obvykle vidí v horním pruhu prohlížeče.
+<p>Další důležitá značka je <code>&lt;body&gt;</code>, která je pravý opak k předchozímu tagu. Zde by se měl nalézat samotný obsah dokumentu, kvůli kterému k vám uživatel zavítal. To znamená texty, obrázky, soubory ke stáhnutí (respektive odkazy na ně), flashové animace apod. Nejjednodušší stránka tedy bude vypadat takto:
+<pre><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;<font class="text">Moje první stránka</font>&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    <font class="text">Kofola je chutnější než Coca-Cola.</font>
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+<h3 id="nadpisy">Nadpisy</h3>
+<p>Nadpisy jsou snad nejdůležitější značkou pro logické rozdělení stránky a proto byste je určitě měli používat. <abbr title="HyperText markup language - Hypertextový značkovací jazyk">HTML</abbr> zná celkem šest úrovní nadpisů a sice <code>&lt;h1&gt;</code> až <code>&lt;h6&gt;</code>, přičemž <code>&lt;h1&gt;</code> je nejdůležitější a <code>&lt;h6&gt;</code> nejméně důležitý. Některé zdroje tvrdí, že nadpis <code>&lt;h1&gt;</code> by se měl na stránce vyskytnout pouze jednou, což opravdu není špatné dodržovat. Dáte tak stránce lepší řád, protože ve chvíli, kdy bude na stránce více <code>&lt;h1&gt;</code> nadpisů, jediný prvek, který bude celou stránku logicky sdružovat, bude titulek <code>&lt;title&gt;</code>, který však není tak úplně součástí stránky.</p>
+<p>Další důležitá věc je návaznost nadpisů, to znamená, že byste neměli flákat nadpisy jak se vás zrovna napadne, ale měly by jít pěkně postupně. Neboli po hlavním nadpisu <code>&lt;h1&gt;</code> by měl následovat nadpis <code>&lt;h2&gt;</code> a potom <code>&lt;h3&gt;</code>. Nebylo by zrovna logické, kdyby po <code>&lt;h1&gt;</code> následoval nadpis <code>&lt;h3&gt;</code>. Pochopitelně tím nemyslím, že by nadpisy měly neustále klesat, toto pořadí nadpisů by bylo zcela v pořádku:</p>
+<pre><code>&lt;h1&gt;<font class="text">hlavní nadpis</font>&lt;/h1&gt;
+  &lt;h2&gt;<font class="text">podnadpis</font>&lt;/h2&gt;
+    &lt;h3&gt;<font class="text">ještě menší podnadpis</font>&lt;/h3&gt;
+    &lt;h3&gt;<font class="text">druhý menší podnadpis</font>&lt;/h3&gt;
+      &lt;h4&gt;<font class="text">nejmenší nadpis na této stránce</font>&lt;/h4&gt;
+  &lt;h2&gt;<font class="text">a zase podnadpis</font>&lt;/h2&gt;
+    &lt;h3&gt;<font class="text">a opět menší podnadpis</font>&lt;/h3&gt;
+</code></pre>
+<p>Je důležité si uvědomit, že nadpisem může být i obrázek. Spousta webů má jako hlavní vizuální nadpis obrázek, většinou protože se jim nelíbí obyčejné písmo a někde ve Photoshopu si udělají lepší, ale málokoho napadne tento nadpis vložit do značky pro hlavní nadpis. Má to tu výhodu, že například prohlížeče, které nepracují s obrázky, budou jako hlavní nadpis brát alternativní text (který pochopitelně musí být vyplněn). Tudíž tento zápis je samozřejmě správný:</p>
+<pre><code>&lt;h1&gt;
+  &lt;img src="<font class="text">nadpis.jpg</font>" alt="<font class="text">Sémantika - pravý význam HTML značek</font>"&gt;
+&lt;/h1&gt;
+</code></pre>
+<p>Nejhorší, co můžete udělat, je, když namísto jednoduché značky <code>&lt;h1&gt;</code> použijete nějakou děsivou konstrukci typu <code>&lt;div id="<font class="text">nadpis</font>"&gt;</code> a tento oddíl si poté nastylujete podle vašich představ. Pamatujte na to, že i nadpis <code>&lt;h1&gt;</code> lze nastylovat jako každou jinou <abbr title="HyperText markup language - Hypertextový značkovací jazyk">HTML</abbr> značku. No a pokud chcete použít dva nadpisy stejné úrovně, ale každý například jiné barvy, není nic jednoduššího, než nadpisu přiřadit třídu (nebo identifikátor):</p>
+<pre><code>&lt;h2 id="<font class="text">vlevo</font>"&gt;<font class="text">novinky</font>&lt;/h2&gt;</code></pre>
+
+<h3 id="formatovani">Používejte odstavce</h3>
+<p>Předchozí příklad má sice správnou sémantickou strukturu, ale přesto mu k dokonalosti ještě něco chybí. Text nemůže volně plavat v dokumentu, každý text totiž musí být vložen do nějaké <em>logické</em> značky. Pokud byste chtěli mít předchozí příklad pouze <abbr title="Extensible HyperText Markup Language - rozšířitelný hypertextový značkovací jazyk">XHTML</abbr> validní, stačilo by text vložit například do nějakého blokového elementu jako je <code>&lt;div&gt;</code>. Dosáhli byste sice validity, ale sémantice byste moc nepomohli, protože <code>&lt;div&gt;</code> není sémantická značka. Tudíž v tomto případě je nejlepší řešení vložit text do odstavce:</p> 
+<pre><code>&lt;p&gt;<font class="text">Kofola je chutnější než Coca-Cola.</font>&lt;/p&gt;</code></pre>
+<p>Rozhodně nepoužívejte pro vyznačení jednotlivých odstavců značku <code>&lt;br&gt;</code>, tato značka neslouží k rozdělení obsahu do odstavců, k tomu slouží právě značka <code>&lt;p&gt;</code>. Pokud nechcete mít mezi odstavci mezeru, vynulujte <abbr title="Cascading Style Sheets - Kaskádové styly">CSS</abbr> vlastnost margin. Pokud například použijete v jednom odstavci několik <code>&lt;br&gt;</code>, bude celý text brán stále jako jeden odstavec. Typický příklad na použití této místy ošemetné značky je například hlavní nadpis toho webu. Mezi <em>&bdquo;sémantika&rdquo;</em> a <em>&bdquo;pravý význam HTML značek&rdquo;</em> je použit řádkový zlom.</p>
+
+<h3 id="obrazky">Obrázky</h3>
+<p>Moderní webdesign praví, že dekorační obrázky se mají vkládat přes kaskádové styly (jako pozadí nějakého elementu), zatímco obrázky, které mají nějakou informační hodnotu, přes značku <code>&lt;img&gt;</code>. Je to logické, protože když si vypnete styly, tak nepotřebujte vidět rozházené části kulatých rohů nebo jinou dekorativní grafiku, která by se stejně rozházela po celé stránce. Ale určitě stále potřebujete vidět graf určující míru nezaměstanosti nebo fotky vašeho nového mobilu. Každý takový obrázek vkládaný pomocí značky <code>&lt;img&gt;</code> by také měl mít atribut <code>alt</code>, neboli alternativní text. Když už vkládáte přes tuto značku dekorativníé obrázek, ponechte <code>alt</code> nevyplněný.</p>
+ 
+<menu id="hlavni-menu">
+<li><a href="index.html">Hlavní strana</a></li>
+<li><a href="navody.html">Návody</a></li>
+<li><a href="download.html">Download</a></li>
+<li><a href="odkazy-zdroje.html">Odkazy</a></li>
+<li><a href="kontakt.html">Kontakt</a></li>
+</menu> 
+
+<p id="odkazy"><a href="uvod-semantika.html">&laquo;&laquo; Úvod do sémantiky</a> <a href="navody.html" id="rozcestnik">&raquo; rozcestník &laquo;</a> <a href="zvyrazneni-textu.html">Zvýraznění textu &raquo;&raquo;</a></p>
+<p id="paticka"><small>o web se stará Lukáš Havrlant (<a href="kontakt.html">kontakt</a>)</small></p>
+
+
+
+  </body>
+</html>

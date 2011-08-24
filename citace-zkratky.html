@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <title>Sémantika - Citace a zkratky</title>
+  <meta name="description" content="Správně zapsané citace, zkratky a zkratová slova">
+  <link rel="home" href="index.html/">
+  <link rel="prev" href="seznamy.html">
+  <link rel="next" href="zdrojove-kody.html">
+  <link rel="up" href="navody.html">
+  <link rel="stylesheet" href="styly.css">
+  </head>
+  <body>
+<h1><a href="index.html" id="nadpis">Sémantika <br> pravý význam html značek</a></h1>
+
+<p id="drobky"><a href="index.html">Hlavní strana</a> &raquo; <a href="navody.html">Návody</a> &raquo; Citace a zkartky</p>
+
+<h2 id="obsah">Citace a zkratky</h2>
+ 
+<h3 id="citace">Správně zapsané citace</h3>
+<p>K zapisování citací slouží celkem tři elementy a sice <code>&lt;q&gt;</code>, <code>&lt;blockquote&gt;</code> a <code>&lt;cite&gt;</code>. Každý z nich má pochopitelně jinou funkci. První dvě značky jsou si nejvíce podobné, protože do obou z nich vkládáte citovaný text, ale s tím rozdílem, že <code>&lt;q&gt;</code> je řádkový element a <code>&lt;blockquote&gt;</code> blokový. Takže pokud máte krátkou citaci, kterou vložíte přímo do odstavce, použijete značku <code>&lt;q&gt;</code>. Jestliže ale chcete zapsat delší citaci, která se má zobrazit jako samostatný odstavec (nebo odstavce - <code>&lt;blockquote&gt;</code> jakožto blokový element může obsahovat další odstavce), použijte právě <code>&lt;blockquote&gt;</code>.</p>
+<p>Obě tyto značky mají ještě nepovinný atribut <code>cite</code> (pozor - <strong>neplést se značkou <code>&lt;cite&gt;</code></strong>), který obsahuje <abbr title="Uniform Resource Locators - unikátní určení zdroje">URL</abbr>, odkud je text citován. Problém tohoto atributu je ten, že v praxi je k ničemu, protože neznám způsob, jak tuto adresu nějak využít (jedině se podívat do zdrojáku). V prohlížeči se totiž nikde nezobrazí, takže je tam vlastně k ničemu. Ale ze sémantického pohledu, pokud tedy necitujete třeba z nějaké knížky atp., by tam být měla.</p> 
+<p>Poslední značka <code>&lt;cite&gt;</code> obsahuje další zdroje k citaci nebo například jméno osoby, která je zrovna citována. Příkladem budiž tento zápis: </p>
+<pre><code>&lt;p&gt;&lt;cite&gt;<font class="text">Yuhů</font>&lt;/cite&gt;<font class="text">, na otázku zda je podtržítkový hack validní, odpověděl, cituji:</font> &lt;q cite="http://www.mraveniste.org/weblog/2004/10/21-css-valid.html"&gt;
+<font class="text">Hele to je blbý, já validitě vůbec nerozumím. Řeknu ti na to ale následující a můžeš mě i citovat: Podtržítkový hack funguje.</font>&lt;/q&gt;&lt;/p&gt;</code></pre>
+
+<h3 id="zkratky">Zkratky a zkratová slova</h3>
+<p>I zkratky mají v <abbr title="HyperText markup language - Hypertextový značkovací jazyk">HTML</abbr> svou značku, respektive hned dvě. První z nich, <code>&lt;abbr&gt;</code>, slouží k vyznačováních zkratek a druhá značka <code>&lt;acronym&gt;</code> k označení zkratového slova. Rozdíl mezi zkratkou a zkratovým slovem je asi takový, že zkratové slovo vyslovíte jako jedno slovo, kdežto zkratku hláskujete po písmenkách. Takže například <acronym>NATO</acronym> je zkratové slovo a <abbr title="Cascading Style Sheets - Kaskádové styly">CSS</abbr> je zkratka. Používání značky <code>&lt;abbr&gt;</code> má ale jeden takový háček a to ten, že <abbr title="Microsoft Internet Explorer">MSIE</abbr> tuto značku prostě nezná&nbsp;:(. 
+<p>Pouze vyznačit nějakou zkratku moc velký význam nemá, správně by totiž ještě měla obsahovat vysvětlení. Obvykle se vkládá do atributu <code>title</code>, takže například zkratka <abbr title="Cascading Style Sheets - Kaskádové styly">CSS</abbr> má ve zdrojáku takovýto zápis:</p>
+<pre><code>&lt;abbr title="<font class="text">Cascading Style Sheets - Kaskádové styly</font>"&gt;<font class="text">CSS</font>&lt;/abbr&gt;</code></pre>
+<p>Nyní ale vzniká poměrně velký problém. Ze sémantického hlediska by měly být označeny všechny zkratky a všechny by také měly mít vysvětlující atribut <code>title</code>. Jenomže zkratka se obvykle vyskytne vícekrát na stránce a není zrovna uživatelsky příjemné, pokud je každé druhé slovo tečkovaně podtrhnuté, což uživatele neustále podvědomě nutí na slovo najíždět myškou a uživatelé se čtečkami to také může poměrně dost otravovat. Proto vznikla teorie, že atribut <code>title</code> by měla obsahovat zkratka pouze při svém prvním výskytu. Řešení ponechám na vás. Snad vám k tomu pomůže i článek <a href="http://www.snizekweb.cz/weblog/jak-psat-zkratky/">Jak psát (a nepsat) zkratky</a> od Martina Snížka. Na tomto webu jsem se rozhodl dát všem zkratkám <code>title</code>, kde jsem vepsal jak originální znění zkratky, tak český překlad.</p>
+<p>Jen ještě jedna technická poznámka na konec - pokud značka <code>&lt;abbr&gt;</code> nebo <code>&lt;acronym&gt;</code> obsahuje atribut <code>title</code>, vykreslí se zkratka s tečkovaným podtržením, aniž byste to museli zapisovat (v Opeře nesmí být <code>title</code> prázdný). V <abbr title="Microsoft Internet Explorer">MSIE</abbr> samozřejmě nefunguje.</p> 
+
+<menu id="hlavni-menu">
+<li><a href="index.html">Hlavní strana</a></li>
+<li><a href="navody.html">Návody</a></li>
+<li><a href="download.html">Download</a></li>
+<li><a href="odkazy-zdroje.html">Odkazy</a></li>
+<li><a href="kontakt.html">Kontakt</a></li>
+</menu>
+
+<p id="odkazy"><a href="seznamy.html">&laquo;&laquo; Seznamy</a> <a href="navody.html" id="rozcestnik">&raquo; rozcestník &laquo;</a> <a href="zdrojove-kody.html">Zdrojové kódy &raquo;&raquo;</a></p>
+
+<p id="paticka"><small>o web se stará Lukáš Havrlant (<a href="kontakt.html">kontakt</a>)</small></p>
+
+
+
+  </body>
+</html>

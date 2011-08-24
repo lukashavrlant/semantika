@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <title>Sémantika - Formuláře</title>
+  <meta name="description" content="Sémanticky správně zapsané formuláře jsou také uživatelsky příjemnější">
+  <link rel="home" href="index.html/">
+  <link rel="prev" href="tabulky.html">
+  <link rel="next" href="nesemanticke-znacky.html">
+  <link rel="up" href="navody.html">
+  <link rel="stylesheet" href="styly.css">
+  </head>
+  <body>
+<h1><a href="index.html" id="nadpis">Sémantika <br> pravý význam html značek</a></h1>
+
+<p id="drobky"><a href="index.html">Hlavní strana</a> &raquo; <a href="navody.html">Návody</a> &raquo; Formuláře</p>
+
+<h2 id="obsah">Formuláře</h2>
+
+<p>Formulář začíná značkou <code>&lt;form&gt;</code>, ve které jsou potom další a další značky, tvořící samotný formulář. Ze sémantického hlediska má smysl se zmínit o třech značkách: <code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code> a <code>&lt;label&gt;</code>.</p>
+
+<h3 id="fieldset">Značka <code>&lt;fieldset&gt;</code></h3>
+<p>Pokud máte nějaký delší formulář, který je možné rozdělit do nějakých logických podskupin, dělá se to za pomocí značky <code>&lt;fieldset&gt;</code>. Takže pokud máte někde vyplnit jméno, příjmení a zaměstnání vašich rodičů, můžete touto značkou snadno rozlišit otce od matky. Je dobré to používat, protože prohlížeč vykreslí kolem části formuláře ohraničení, čímž se celý formulář stává mnohem přehlednějším.</p>
+<p>Poslední dobou ale vídám docela zajímavou věc a sice, že značka <code>&lt;fieldset&gt;</code> je používáná nejen na sdružování částí formulářů, které patří k sobě, ale i na jiné objekty, které spolu nějak souvisí (a nejsou tedy součástí formuláře). Netroufám si tvrdit, jak moc to je či není sémantické, podle mého názoru je lepší mít jasnou strukturu nadpisů.</p>
+
+<h3 id="legend">Značka <code>&lt;legend&gt;</code></h3>
+<p>Předchozí značka měla za úkol spojit dohromady tématicky blízké části formuláře. Tag <code>&lt;legend&gt;</code> potom tyto jednotlivé části pojmenovává - je to v podstatě nadpis. Takže pokud bych použil předchozí příklad, vepsalo by se do této značky "Otec" a "Matka". Tento text se potom objeví v rámečku okolo fieldsetu. Vypadá to velmi efektivně a každý pochopí o co jde, takže opět mohu jen doporučit tuto značku používat. Mimochodem - <code>&lt;legend&gt;</code> musí následovat hned za <code>&lt;fieldset&gt;</code>.</p> 
+
+<h3 id="label">Poslední značka <code>&lt;label&gt;</code></h3>
+<p>Každé pole obvykle obsahuje nějaký doprovodný text, který vysvětluje, co se do daného políčka má zapsat, stejně tak je u každého přepínače uveden nějaký název, který vybíráte. Tento text by měl obsažen ve značce <code>&lt;label&gt;</code>. A aby bylo jednoznačně určené, k jakému poli se popisek vztahuje, přidává se zde obvykle ještě atribut <code>for</code>, kde je obsažen identifikátor onoho pole. Značka <code>&lt;label&gt;</code> se určitě vyplatí používat, protože formuláře jsou pak použitelnější, neboť když máte popisek například u radiobuttonu nemusíte klikat přímo na ten přepínač, stačí kliknout na ten popisek a přepínač se aktivuje.</p> 
+<p>Příklad na formuláře:</p>
+
+<pre><code>&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;<font class="text">Matka</font>&lt;/legend&gt;
+    &lt;p&gt;
+      &lt;label for="<font class="text">jmeno-m</font>"&gt;<font class="text">Jméno matky:</font>&lt;/label&gt;
+      &lt;input type="<font class="text">text</font>" id="<font class="text">jmeno-m</font>"&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="<font class="text">prijmeni-m</font>"&gt;<font class="text">Příjmení matky:</font>&lt;/label&gt;
+      &lt;input type="<font class="text">text</font>" id="<font class="text">prijmeni-m</font>"&gt;
+    &lt;/p&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;<font class="text">Otec</font>&lt;/legend&gt;
+    &lt;p&gt;
+      &lt;label for="<font class="text">jmeno-o</font>"&gt;<font class="text">Jméno otce:</font>&lt;/label&gt;
+      &lt;input type="<font class="text">text</font>" id="<font class="text">jmeno-o</font>"&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="<font class="text">prijmeni-o</font>"&gt;<font class="text">Příjmení otce:</font>&lt;/label&gt;
+      &lt;input type="<font class="text">text</font>" id="<font class="text">prijmeni-o</font>"&gt;
+    &lt;/p&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+</code></pre>
+
+<menu id="hlavni-menu">
+<li><a href="index.html">Hlavní strana</a></li>
+<li><a href="navody.html">Návody</a></li>
+<li><a href="download.html">Download</a></li>
+<li><a href="odkazy-zdroje.html">Odkazy</a></li>
+<li><a href="kontakt.html">Kontakt</a></li>
+</menu>
+
+<p id="odkazy"><a href="tabulky.html">&laquo;&laquo; Tabulky</a> <a href="navody.html" id="rozcestnik">&raquo; rozcestník &laquo;</a> <a href="nesemanticke-znacky.html">Nesémantické značky &raquo;&raquo;</a></p>
+
+<p id="paticka"><small>o web se stará Lukáš Havrlant (<a href="kontakt.html">kontakt</a>)</small></p>
+
+
+
+  </body>
+</html>

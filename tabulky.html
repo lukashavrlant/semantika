@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <title>Sémantika - Tabulky</title>
+  <meta name="description" content="Jak mají vypadat sémanticky správně zapsané tabulky">
+  <link rel="home" href="index.html/">
+  <link rel="prev" href="logicke-formatovani.html">
+  <link rel="next" href="formulare.html">
+  <link rel="up" href="navody.html">
+  <link rel="stylesheet" href="styly.css">
+  </head>
+  <body>
+<h1><a href="index.html" id="nadpis">Sémantika <br> pravý význam html značek</a></h1>
+
+<p id="drobky"><a href="index.html">Hlavní strana</a> &raquo; <a href="navody.html">Návody</a> &raquo; Tabulky</p>
+
+<h2 id="obsah">Tabulky</h2>
+
+<h3 id="layout">Kontroverzní tabulkový layout</h3>
+<p>Dlouhá léta se na stránkách používal tabulkový layout (někteří ho používají dodnes). S nástupem kaskádových stylů se situace naštěstí daleko zlepšila. Tabulka je především určená pro tabulková data, nikoliv pro samotnou strukturu stránky. Naučte se kaskádové styly, pokud budete na rozvrh webu stále používat tabulku, pravděpodobně nikdy nedocílíte sémantického webu.</p>
+
+<h3 id="pouziti">Správné načasování tabulky</h3>
+<p>Někteří jedinci mají tabulku spojenou výhradně s tabulkovým layoutem a tak se bojí tabulku použít i kdekoliv jinde. To znamená i na tabulková data. Odmítají zde použít tabulku a vymýšlejí nesmysly jako desítky plovoucích divů, které se všemožně obtékají, proplouvají mezi sebou a kříží se. Jiní například tabulku stvoří tak, že jednotlivé oddíly absolutně napozicují. Taky &bdquo;bezva&rdquo; řešení.</p>
+<p>Takže prosím vás, na tabulková data používejte tabulku, je to <strong>jediné možné správné řešení</strong>, žádné plovoucí oddíly ani absolutní pozicování. Tabulková data jsou například výsledky nějakých hodnot v závislosti na něčem (dalo by se říci graf přepsaný do textové podoby) - třeba základní hodnoty goniometrických funkcí. Stejně tak mohou být tabulková data spisovatelé a jejich hlavní díla, rok narození a styl, jakým obvykle psali. Často se také tabulka na webu používá v případě, kdy porovnáváte dva výrobky, který z nich má lepší to a který je zase lepší v tomhle. Další časté použití je třeba ceník nějakých produktů. Určitě se nebojte používat tabulky.</p>
+
+<h3 id="jak">Jak má tabulka vypadat</h3>
+<p>Tabulku začínáme značkou <code>&lt;table&gt;</code>, to patrně všichni víte. Po této značce by měla následovat značka <code>&lt;caption&gt;</code>, což je vlastně takový nadpis tabulky - slouží k rychlému zorientování, k čemu ta tabulka slouží nebo co v ní nalezneme. V souvislosti s tímto ještě zmíním atribut <code>summary</code>, který by měl obsahovat detailnější obsah tabulky. Atribut se vkládá do značky <code>&lt;table&gt;</code>.</p>
+<p>Dále můžeme využít tři podobné značky na celkové rozdělení tabulky: <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> a <code>&lt;tfoot&gt;</code>. První značka, <code>&lt;thead&gt;</code>, ohraničuje záhlaví tabulky, to znamená obvykle první řádek tabulky, kde se nachází popisky sloupců a kde vlastně ještě žádná tabulková data nejsou, nacházejí se zde pouze ty popisky. Další značka, <code>&lt;tbody&gt;</code>, potom obsahuje tělo tabulky, neboli samotný obsah. Tento tag může být použít vícekrát, v závislosti na tom, kolik různých částí tabulka má. Například pokud máte v tabulce nějaké datumy, můžete pomocí <code>&lt;tbody&gt;</code> oddělit datumy v letošním a loňském roce. Poslední značka, <code>&lt;tfoot&gt;</code>, tvoří zápatí a obvykle obsahuje nějaké součty nebo celkový souhrn tabulky. Tyto tři značky však nejsou povinné a mnohdy se ani použít nedají. Pokud je však můžete použít, učiňte tak.</p>
+<p>Samotná tabulka se pak tvoří další trojicí značek a sice: <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code> a <code>&lt;td&gt;</code>. Jednotlivé řádky tabulky tvoříme pomocí značky <code>&lt;tr&gt;</code>. Druhá značka, <code>&lt;th&gt;</code>, by měla určovat hlavičkovou informaci, měla by tedy býti v elementu <code>&lt;thead&gt;</code>. No a konečně na datové informace máme značku <code>&lt;td&gt;</code>, která, stejně jako předchozí značka, tvoří jednotlivé sloupce tabulky. A ještě jedna ukázková tabulka:</p>
+<pre><code>&lt;table summary="<font class="text">ceník našich služeb - grafický návrh, tvorba kódu a programování aplikací</font>"&gt;
+  &lt;caption&gt;
+    <font class="text">Ceník našich služeb</font>
+  &lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;<font class="text">služba</font>&lt;/th&gt;
+      &lt;th&gt;<font class="text">cena bez dph</font>&lt;/th&gt;
+      &lt;th&gt;<font class="text">cena s dph</font>&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;<font class="text">grafický návrh</font>&lt;/td&gt;
+      &lt;td&gt;<font class="text">1000,-</font>&lt;/td&gt;
+      &lt;td&gt;<font class="text">1190,-</font>&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;<font class="text">kodérské služby</font>&lt;/td&gt;
+      &lt;td&gt;<font class="text">2000,-</font>&lt;/td&gt;
+      &lt;td&gt;<font class="text">2380,-</font>&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;<font class="text">programování aplikací</font>&lt;/td&gt;
+      &lt;td&gt;<font class="text">3000,-</font>&lt;/td&gt;
+      &lt;td&gt;<font class="text">3570,-</font>&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;<font class="text">celkem za web</font>&lt;/td&gt;
+      &lt;td&gt;<font class="text">6000,-</font>&lt;/td&gt;
+      &lt;td&gt;<font class="text">7140,-</font>&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+
+<menu id="hlavni-menu">
+<li><a href="index.html">Hlavní strana</a></li>
+<li><a href="navody.html">Návody</a></li>
+<li><a href="download.html">Download</a></li>
+<li><a href="odkazy-zdroje.html">Odkazy</a></li>
+<li><a href="kontakt.html">Kontakt</a></li>
+</menu>
+
+<p id="odkazy"><a href="logicke-formatovani.html">&laquo;&laquo; Logické formátování</a> <a href="navody.html" id="rozcestnik">&raquo; rozcestník &laquo;</a> <a href="formulare.html">Formuláře &raquo;&raquo;</a></p>
+ 
+<p id="paticka"><small>o web se stará Lukáš Havrlant (<a href="kontakt.html">kontakt</a>)</small></p>
+
+
+
+  </body>
+</html>

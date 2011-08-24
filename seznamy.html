@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <title>Sémantika - Seznamy</title>
+  <meta name="description" content="Jak by mělo vypadat správně zapsné menu, rozdíly mezi jednotlivými seznamy">
+  <link rel="home" href="index.html/">
+  <link rel="prev" href="uprava-textu.html">
+  <link rel="next" href="citace-zkratky.html">
+  <link rel="up" href="navody.html">
+  <link rel="stylesheet" href="styly.css">
+  </head>
+  <body>
+<h1><a href="index.html" id="nadpis">Sémantika <br> pravý význam html značek</a></h1>
+
+
+<p id="drobky"><a href="index.html">Hlavní strana</a> &raquo; <a href="navody.html">Návody</a> &raquo; Seznamy</p>
+
+<h2 id="obsah">Seznamy</h2>
+
+<h3 id="cislovany">Číslovaný seznam</h3>
+<p>Číslované seznamy se uvozují párovou značkou <code>&lt;ol&gt;</code> a jednotlivé položky se pak tvoří nepárovou značkou <code>&lt;li&gt;</code>. Značka <code>&lt;ol&gt;</code> má ještě dva zásadní atributy a to <code>type</code> a <code>start</code>. První z nich určuje typ číslování. Na přesné hodnoty se podívejte k <a href="http://www.jakpsatweb.cz/html/seznamy.html#li">Yuhůovi</a>. Tento atribut má ovšem trochu smůlu, neboť byl konsorciem zavrhnut ve prospěch kaskádových stylů, což je věčná škoda.</p> 
+<p>Atribut <code>type</code> má totiž svůj jasný sémantický význam. Změnu číslování můžete totiž provádět ze dvou důvodů: buď se vám prostě nelíbí obyčejné čísla a chcete použít třeba hezky vypadající římské číslování (zde tedy použijete kaskádové styly) nebo použijete třeba abecední číslování, protože normální čísla by v tom daném seznamu neměly smysl. A v tomto případě je sémanticky správné použít atribut <code>type</code>.</p>
+<p>Druhý atribut <code>start</code> má za úkol nastavit počáteční hodnotu číslování. Pokud chcete vypsat všechny fotbalové týmy, které na posledním Euru nedosáhly na žádný cenný kov, použijete zápis <code>start="4"</code>. Nepoužívejte žádné vychytávky, jakože budete číslovat od začátku, ale první tři položky necháte nevyplněné a vypozicujete někam mimo obrazovku, to je nesprávný způsob. Jediný sémanticky korektní zápis je pomocí atributu <code>start</code>.
+
+<h3 id="necislovany">Nečíslovaný seznam</h3>
+<p>Pokud chcete mít na stránkách &bdquo;puntíčkovaný&rdquo; seznam (nezáleží vám na pořadí položek), použijte značku <code>&lt;ul&gt;</code>. I tento tag má zavržený atribut <code>type</code>, avšak nenapadá mě způsob, kdy by použití tohoto atributu v neuspořádaném seznamu bylo sémantické. Zde totiž atribut <code>type</code> <strong>mění pouze vzhled odrážek</strong>, takže o sémantice nemůže být řeč. Pokud tedy chcete změnit vzhled odrážek u nečíslovaného seznamu, použijte kaskádové styly.</p>
+<p>Seznamy také lze do sebe zanořovat, což je naprosto v pořádku. Můžete pochopitelně zanořovat i číselné seznamy. Používá se to v případě, kdy chcete jednu (nebo klidně i více) položek seznamu rozdělit ještě na několik dalších. Takže v praxi to bude vypadat takto:</p>
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;<font class="text">Punk</font>
+    &lt;ul&gt;
+      &lt;li&gt;<font class="text">Sex Pistols</font>&lt;/li&gt;
+      &lt;li&gt;<font class="text">Visací zámek</font>&lt;/li&gt;
+      &lt;li&gt;<font class="text">Green Day(?)</font>&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;<font class="text">Rock</font>
+    &lt;ul&gt;
+      &lt;li&gt;<font class="text">ACDC</font>&lt;/li&gt;
+      &lt;li&gt;<font class="text">Olympic</font>&lt;/li&gt;
+      &lt;li&gt;<font class="text">Lucie(?)</font>&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+
+<h3 id="menu">Menu</h3>
+<p>S menu bývá obvykle problém, protože hodně stránek řeší vkládání menu různými způsoby. Některé jsou sémantické více, některé méně, ale snad žádné nejsou sémantické úplně. V zásadě jediná sémantická možnost, jak do stránky vložit menu, je prostřednictvím značky <code>&lt;menu&gt;</code> (nečekané, že ano). Jednotlivé položky menu se pak definují stejně jako položky jiného seznamu, tudíž značkou <code>&lt;li&gt;</code>. Pokud píšete ve striktní verzi, kde již tato značka není, jste odkázáni pouze na obyčejný nečíslovaný seznam <code>&lt;ul&gt;</code>.</p>
+<p>Pokud chcete vidět, <em>jak nepsat menu</em>, stačí se prozohlédnout po širém internetu. Někde je menu vloženo do tabulky, jinde je třeba psáno prostě za sebe a odřádkováno pomocí <code>&lt;br&gt;</code>, docela časté je potom psát odkazy za sebe a oddělit je pouze symbolem "|".  Takže <strong>špatný zápis menu:</strong></p>
+<pre><code>&lt;a href="#"&gt;<font class="text">Návody</font>&lt;/a&gt; |
+&lt;a href="#"&gt;<font class="text">Praxe</font>&lt;/a&gt; |
+&lt;a href="#"&gt;<font class="text">Odkazy</font>&lt;/a&gt;
+</code></pre>
+<p>Sémanticky <strong>správný zápis</strong> by vypadal asi takto:</p>
+<pre><code>&lt;menu&gt;
+  &lt;li&gt;&lt;a href="#"&gt;<font class="text">Návody</font>&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;<font class="text">Praxe</font>&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;<font class="text">Odkazy</font>&lt;/a&gt;&lt;/li&gt;
+&lt;/menu&gt;
+</code>
+</pre>
+
+<h3 id="dir">Použití adresáře</h3>
+<p>Pokud máte nějaký seznam, jenž je složen z krátkých položek, měl by se použít tag <code>&lt;dir&gt;</code>. Nejklasičtější příklad bude patrně seznam písmen, či písmenných odkazů, například v nějakém slovníku.</p>
+
+
+<h3 id="definice">Definiční seznam</h3>
+<p>Definiční seznam má vícero použití, než pouze pro encyklopedické vysvětlování pojmů, jak by se mohlo zprvu zdát. Nejdříve ale ještě pár slov k tomu, jak se definiční seznam zapisuje. Celý seznam začínáme značkou <code>&lt;dl&gt;</code> (z anglického <dfn lang="en">definition list</dfn>, což neznamená nic jiného, než definiční seznam - já si to takhle alespoň dobře pamatuji, protože všechny značky definic mi přijdou stejné ;-)). Pojem, který budeme vysvětlovat, vložíme do značky <code>&lt;dt&gt;</code> a vysvětlující text do <code>&lt;dd&gt;</code>. Takže nějak takhle:</p>
+<pre><code>&lt;dl&gt;
+&lt;dt&gt;<font class="text">Hurvínek</font>&lt;/dt&gt;
+  &lt;dd&gt;<font class="text">Česká legendární loutková postavička</font>&lt;/dd&gt;
+&lt;dt&gt;<font class="text">Mánička</font>&lt;/dt&gt;
+  &lt;dd&gt;<font class="text">Nejlepší a nejchytřejší Hurvínkova kamarádka</font>&lt;/dd&gt;
+&lt;dt&gt;<font class="text">Spejbl</font>&lt;/dt&gt;
+  &lt;dd&gt;<font class="text">Hurvínkův otec přísný jako řemen</font>&lt;/dd&gt;
+&lt;/dl&gt;
+</code>
+</pre>
+
+<p>Definiční seznam může být použit prakticky vždycky, kde máte nějaký úsek textu, který v následujícím odstavci vysvětlíte či nějak jinak přiblížíte (zase používat s rozumem). Dá se to použít pro klasické <em>novinky</em>, kdy pojem, který budeme vysvětlovat, představuje datum a případně nadpis a objasňující text pak bude text novinky. Já například definiční seznam používám pro <a href="navody.html">rozcestník</a>. I definiční seznamy do sebe můžete pochopitelně zanořovat.</p>
+
+<menu id="hlavni-menu">
+<li><a href="index.html">Hlavní strana</a></li>
+<li><a href="navody.html">Návody</a></li>
+<li><a href="download.html">Download</a></li>
+<li><a href="odkazy-zdroje.html">Odkazy</a></li>
+<li><a href="kontakt.html">Kontakt</a></li>
+</menu>
+
+<p id="odkazy"><a href="uprava-textu.html">&laquo;&laquo; Úprava textu</a> <a href="navody.html" id="rozcestnik">&raquo; rozcestník &laquo;</a> <a href="citace-zkratky.html">Citace a zkratky &raquo;&raquo;</a></p>
+
+<p id="paticka"><small>o web se stará Lukáš Havrlant (<a href="kontakt.html">kontakt</a>)</small></p>
+
+
+
+  </body>
+</html>

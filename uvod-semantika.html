@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <title>Sémantika - Úvod do sémantiky</title>
+  <meta name="description" content="Lehký úvod do sémantiky, společně s charakteristikou její výhody">
+  <link rel="home" href="index.html/">
+  <link rel="next" href="zakladni-kostra-stranky.html">
+  <link rel="up" href="navody.html">
+  <link rel="stylesheet" href="styly.css">
+  </head>
+  <body>
+<h1><a href="index.html" id="nadpis">Sémantika <br> pravý význam html značek</a></h1>
+
+
+<p id="drobky"><a href="index.html">Hlavní strana</a> &raquo; <a href="navody.html">Návody</a> &raquo; Úvod do sémantiky</p>
+
+<h2 id="obsah">Úvod do sémantiky</h2>
+<h3 id="vyhody">K čemu je sémantika dobrá?</h3>
+<p>Mohlo by se zdát, že sémantika je jenom pro dobrý pocit webdesignera, aby si mohl říci, ano, můj web je sémantický. Ale není tomu tak, i sémantika má své nesporné výhody, které ji nelze upřít.</p>
+<ul>
+<li>Sémantický web se s vypnutými styly zobrazí korektně a uživatel by jej měl bez jakýchkoliv větších problémů umět použít. Tím se web samozřejmě stává mnohem <a href="http://pristupnost.nawebu.cz/">přístupnějším</a>. <strong>Sémantika je jedním z klíčových kamenů přístupnosti</strong>.</li>
+<li>Pokud budou vaše stránky nesémantické a nebudete řádně vyznačovat alespoň základní části stránky, váš web nebude nikdy SEO-friendly a jen těžko se budete prokousávat na přední místa ve vyhledávačích. <strong>Sémantický web je přátelský nejen vůči postiženým, ale také vůči robotům</strong>.</li>
+<li>Pojetí moderního webdesignu zní, oddělit obsah od vzhledu. Neboli kaskádové styly mají určovat <em>vzhled</em> dokumentu a <abbr title="HyperText markup language - Hypertextový značkovací jazyk">HTML</abbr> značky zase jeho <em>smysl</em>. </li>
+</ul>
+
+<h3 id="nepratele">Nepřátelé sémantiky</h3>
+<p>Sémantika nemá vyložené odpůrce, neznám snad nikoho, kdo by tvrdil, že sémantika by stránce ublížila nebo že sémantika je zcela k ničemu (předpokládám, že takoví jedinci se asi přece jenom najdou, ale doufám, že jich není moc. Já naštěstí žádného takového webdesignera neznám). Sémantika má spíš pasivní nepřátele. Někteří tvůrci webů jsou příliš líní a pohodlní na to, než aby psali sémantické weby a někteří o sémantice třeba ještě neslyšeli. Nejhorší pak je možnost, kdy webdesigner neslyšel o sémantice a začíná se učit kaskádové styly. To potom můžete vidět hrůzy různých typů. Například takto vypadá sémanticky správně zapsaný nadpis:</p>
+<pre><code>&lt;h1&gt;<font class="text">Sémantický nadpis</font>&lt;/h1&gt;</code></pre>
+<p>Ale stalo se, že někteří aktivní tvůrci webových stránek, kteří byli až přespříliš okouzleni možnostmi kaskádových stylů, začali nadpisy prostě stylovat:</p>
+<pre><code>&lt;div id="<font class="text">hlavni-nadpis</font>"&gt;<font class="text">Nesémantický nadpis</font>&lt;/div&gt;</code></pre> 
+<p>(v externím souboru kaskádových stylů byl potom tento oddíl nastylován tak, aby vypadal jako nadpis). Takhle to rozhodně nemá vypadat.</p>
+<p>Kaskádové styly na jedné straně sémantice pomohly, protože <strong>jedině pomoci kaskádových stylů</strong> je možné řádně oddělit obsah od vzhledu, ale ve chvíli, kdy jsou styly špatně pochopeny, napáchají více škody než užitku (alespoň co se týče sémantiky, pochopitelně). <abbr title="Cascading Style Sheets - Kaskádové styly">CSS</abbr> se musí především používat s rozumem. Naštěstí již není moc webdesignérů, kteří by měli web poskládán pouze ze značek typu <code>&lt;div&gt;</code>, takže jediným velkým nepřítelem sémantiky zůstává líný webdesignér&nbsp;;-).</p>
+
+<h3>Sémantika je důležitá, ale není nezbytná</h3>
+<p>Tento nadpis si dobře zapamatujte. Já se na tomto webu budu snažit popsat sémantiku co možná nejpodrobněji, ale bych nerad, aby to vyznělo, že pokud nebude web stoprocentně sémantický, jedná se o špatný web. Sémantika totiž může omezovat, může zdržovat a někdy také může webdesignera pořádně natrápit. Použít nesémantický ale daleko jednodušší postup nebo sémantický, ale o dost složitější postup? Sám většinou sáhnu po první možnosti, jen na tomto webu se snažím dodržet maximální sémantičnost. 
+<p>Navíc dosáhnout stoprocentní sémantiky je někdy prakticky nemožné a vynaložené úsilí by za to rozhodně nestálo. Stačí, pokud zvládnete alespoň základy a některé pokročilé techniky sémantiky, <strong>nemusíte hned celý layout stránek stavět bez divů</strong> jako já tady ;-)
+
+
+<menu id="hlavni-menu">
+<li><a href="index.html">Hlavní strana</a></li>
+<li><a href="navody.html">Návody</a></li>
+<li><a href="download.html">Download</a></li>
+<li><a href="odkazy-zdroje.html">Odkazy</a></li>
+<li><a href="kontakt.html">Kontakt</a></li>
+</menu>
+
+<p id="odkazy"><a href="index.html">&laquo;&laquo; hlavní strana</a> <a href="navody.html" id="rozcestnik">&raquo; rozcestník &laquo;</a> <a href="zakladni-kostra-stranky.html">Základní kostra stránky &raquo;&raquo;</a></p>
+<p id="paticka"><small>o web se stará Lukáš Havrlant (<a href="kontakt.html">kontakt</a>)</small></p>
+
+
+
+  </body>
+</html>

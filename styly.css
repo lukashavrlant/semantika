@@ -1,0 +1,36 @@
+*{margin:0;padding:0}
+html{background:#fff url("pruh.jpg") repeat-x}
+body {font-family: "Palatino Linotype", "New York CE", utopia, serif;font-size:.9em;margin:auto;width:700px;line-height:1.5;letter-spacing:.6px;background:#fff url("sachovnice.gif") repeat-y;position:relative;}
+h1{height:300px;background:url("semantika.jpg") no-repeat;width:650px;margin-left:25px;margin-right:-25px}
+h1 a {text-decoration:none;color:#383;font-size:0.8em;padding-top:40px;margin-bottom:-40px;display:block;height:128px;padding-left:50px;margin-right:-50px;}
+h1 a:hover{color:#383;background:none}
+#hlavni-menu{text-align:center;width:650px;padding:3px 0px;position:absolute;top:145px;left:25px}
+#hlavni-menu li{float:left;list-style:none;border-bottom:3px double #00a;border-top:3px double #00a;margin-bottom:10px;}
+#hlavni-menu a{font-size:1em;font-weight:bold;letter-spacing:2px;display:block;text-decoration:none;width:130px;color:white;background:orange;}
+#hlavni-menu a:hover{color:white;background:#d33}
+#pristupnost{position:absolute;top:-5000px}
+h2{font-size:1.6em;color:green;text-align:center;padding:0px 0px 10px;}
+h3{padding:15px 45px;font-size:1.2em;color:green;}
+ul, .seznam, dir {padding:20px 100px}
+ul li{padding:5px}
+#paticka{padding:30px 50px 50px 50px;text-align:center}
+p{padding:5px 45px;text-indent:15px}
+a{color:#f00}
+a:hover{color:white;background:#d33}
+strong{color:green}
+code{color:#33c;font-size:1.1em;_font-size:1.05em;font-weight:bold;}
+#drobky{font-size:.9em;margin-top:-70px;margin-bottom:30px}
+pre {margin:15px 50px;width:580px;overflow:auto;border:1px dashed #999;padding:10px;_padding-bottom:20px;overflow-y: hidden;}
+.text{color:green;font-weight:normal}
+samp{font-family: "Palatino Linotype", "New York CE", utopia, serif;font-style:italic}
+.seznam{list-style-type:circle}
+.seznam a{font-weight:bold}
+.seznam dd{padding-left:20px}
+.desatero dt{padding-top:15px;}
+.desatero strong{color:black}
+img{padding:15px 10px 15px 75px;}
+#obsahindex{margin-top:-25px}
+#rozcestnik{margin:0px 15px}
+#odkazy{text-align:center;padding-top:15px}
+#email{color:black}
+address{text-align:center}

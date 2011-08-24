@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <title>Sémantika - Desatero sémantického webu</title>
+  <meta name="description" content="Deset rad, které byste si určitě měli vzít k srdci, jestliže chcete mít sémantický web">
+  <link rel="home" href="index.html/">
+  <link rel="prev" href="fekalni-styl.html">
+  <link rel="up" href="navody.html">
+  <link rel="stylesheet" href="styly.css">
+  </head>
+  <body>
+<h1><a href="index.html" id="nadpis">Sémantika <br> pravý význam html značek</a></h1>
+
+
+<p id="drobky"><a href="index.html">Hlavní strana</a> &raquo; <a href="navody.html">Návody</a> &raquo; Desatero sémantického webu</p>
+
+<h2 id="obsah">Desatero sémantického webu</h2>
+<h3 id="desatero">Na tohle byste opravdu neměli zapomenout</h3>
+<dl class="seznam desatero">
+<dt><strong>Používejte nadpisy</strong></dt>
+<dd>K vyznačení nadpisů slouží značky <code>&lt;h1&gt;</code> až <code>&lt;h6&gt;</code>, nikoliv nastylované divy či spany. Dokonce ani značka <code>&lt;font&gt;</code> v kombinaci s <code>&lt;b&gt;</code> není zrovna nejvhodnější řešení.</dd>
+<dt><strong>Text zvýrazňujte příslušnými značkami</strong></dt>
+<dd>Na zvýraznění textu máme značky <code>&lt;em&gt;</code> nebo silnější <code>&lt;strong&gt;</code>, opět nepoužívejte žádné kaskádové výmysly nebo hrátky s <code>&lt;font&gt;</code>.</dd>
+<dt><strong>Používejte odstavce</strong></dt>
+<dd>Text rozdělujte do odstavců <code>&lt;p&gt;</code>, neoddělujte odstavce řádkovým zlomem <code>&lt;br&gt;</code>, ten neslouží ke členění textů do odstavců.
+<dt><strong>Nepřekrucujte si značky k obrazu svému</strong></dt>
+<dd>Každá značka má svůj význam, někdy se dá přimhouřit oko a použít značku na něco podobného, ale rozhodně neutíkejte s nějakou značkou do úplně jiné významové dimenze.</dd>
+<dt><strong>Tabulky používejte pro tabulková data</strong></dt>
+<dd>Vyhněte se pokud možno tabulkovému layotu, ale kupříkladu na ceník tabulku rozhodně použijte, rozlišujte tabulková a netabulková data.</dd>
+<dt><strong>Menu má také svou značku</strong></dt>
+<dd>Odkazy v menu napište do jednotlivých položek značky <code>&lt;menu&gt;</code>, případně <code>&lt;ul&gt;</code>, pokud pracujete ve striktním dtd.</dd>
+<dt><strong>Minimalizujte počet nesémantických značek</strong></dt>
+<dd>Týká se to především problematických značek <code>&lt;div&gt;</code> a <code>&lt;span&gt;</code>. Některé věci bez nich nejdou udělat, některé se dělají těžko. Přesto se pokuste nepoužívat je, když nebude třeba.</dd>
+<dt><strong>Všechno, co se týká vzhledu, patří do kaskádových stylů</strong></dt>
+<dd>Kaskádové styly jsou zde kvůli určení vzhledu dokumentu, <abbr title="HyperText markup language - Hypertextový značkovací jazyk">HTML</abbr> značky zase kvůli významu. Myslete na to.</dd>
+<dt><strong>Myslete na značky pro logické formátování</strong></dt>
+<dd>Mám tím na mysli značky jako <code>&lt;ins&gt;</code>, <code>&lt;del&gt;</code>, <code>&lt;address&gt;</code>, <code>&lt;sub&gt;</code>, <code>&lt;sup&gt;</code> nebo značky pro citáty, zkratky, počítačový kód apod. Často se na ně zapomíná, alespoň občas si tak vzpomeňte, že vůbec existují.</dd>
+<dt><strong>Formuláře mají také svůj řád</strong></dt>
+<dd>Používejte ve formulářích značky jako <code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code> a <code>&lt;label&gt;</code>, nejen že váš web bude sémantičtější, ale pomůžete i uživateli.</dd>
+</dl>
+
+<h3 id="ikonka">Ikonka sémantického webu</h3>
+<p>Původně jsem to bral spíš jako legraci, ale pak jsem si řekl, proč ne. Takže pokud váš web <strong>splnil všechny body sémantického desatera</strong>, můžete si na své stránky umístit následující ikonku:</p>
+<img src="semantic-web.png" alt="sémantický web">
+<p>Vzhledem k tomu, že neexistuje žádný validátor sémantiky, nezbývá mi nic jiného, než důvěřovat tvůrcům webových stránek, že tuto ikonku nebudou zneužívat, například umístěním ikonky na nesémantickém webu. Ještě pár detailů k používání a šíření: ikonku si můžete umístit kam jen chcete, ikonka <strong>nemusí odkazovat na tento web</strong> (narozdíl od ikonky validity, která musí odkazovat na konsorcium), může si jen spokojeně hovět na vašich stránkách. Samozřejmě ale klidně <strong>může odkazovat na tento web</strong>, já se určitě zlobit nebudu. Pokud nemáte potřebu si tuto ikonku na váš web dávat, tak si ji tam nedávejte, já vás pochopitelně nenutím, je to spíš jen <em>&bdquo;for fun&rdquo;</em>.</p>
+
+<menu id="hlavni-menu">
+<li><a href="index.html">Hlavní strana</a></li>
+<li><a href="navody.html">Návody</a></li>
+<li><a href="download.html">Download</a></li>
+<li><a href="odkazy-zdroje.html">Odkazy</a></li>
+<li><a href="kontakt.html">Kontakt</a></li>
+</menu>
+
+<p id="odkazy"><a href="fekalni-styl.html">&laquo;&laquo; Fekální styl</a> <a href="navody.html" id="rozcestnik">&raquo; rozcestník &laquo;</a></p>
+
+<p id="paticka"><small>o web se stará Lukáš Havrlant (<a href="kontakt.html">kontakt</a>)</small></p>
+
+
+
+  </body>
+</html>

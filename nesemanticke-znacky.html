@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <title>Sémantika - Nesémantické značky</title>
+  <meta name="description" content="I v HTML existují nesémantické značky, zde je jejich seznam">
+  <link rel="home" href="index.html/">
+  <link rel="prev" href="formulare.html">
+  <link rel="next" href="fekalni-styl.html">
+  <link rel="up" href="navody.html">
+  <link rel="stylesheet" href="styly.css">
+  </head>
+  <body>
+<h1><a href="index.html" id="nadpis">Sémantika <br> pravý význam html značek</a></h1>
+
+<p id="drobky"><a href="index.html">Hlavní strana</a> &raquo; <a href="navody.html">Návody</a> &raquo; Nesémantické značky</p>
+
+<h2 id="obsah">Nesémantické značky</h2>
+<h3 id="div">Div sem, div tam</h3>
+<p>Řeč tedy bude hlavně o značkách <code>&lt;div&gt;</code> a <code>&lt;span&gt;</code>, které, ač <strong>nemají žádný sémantický význam</strong>, patří poslední dobou k nejpoužívanějším značkám. Proč? Protože je to pohodlné.</p>
+<p>Snad na každém webu s <abbr title="Cascading Style Sheets - Kaskádové styly">CSS</abbr> layoutem tvoří hlavní kostru právě nastylované divy. To bych ještě pochopil, je daleko pracnější udělat layout stránky bez použití jediného divu a v zásadě tuto metodu schvaluji, ač ji sám na tomto webu nepoužívám. Ale mnohdy se stane, že celý web je pouze hromádka divů, bez jakékoliv jiné značky. To je potom chyba. Zapamatujte si, že čím méně je na stránce divů, tím je stránka sémantičtější (pochopitelně stále myslím <abbr title="Cascading Style Sheets - Kaskádové styly">CSS</abbr> layout). Někdy se tomu nejde vyhnout, někdy se prostě ten div musí přidat, ale mnohdy tam jsou zcela zbytečně. Třeba <a href="http://plavacek.net/">Plaváčkovi</a> stačilo na vytvoření webu použít <a href="http://klient.plavacek.net/div/">jen jeden div a jeden span</a>.</p>
+<p>Nakonec se vlastně stalo to, že z webů, které byly plné značek jako <code>&lt;tr&gt;</code> nebo <code>&lt;td&gt;</code> se staly stránky, které jsou přeplněné značkami <code>&lt;span&gt;</code> a <code>&lt;div&gt;</code>. Kam se poděla ta čistota, s jakou byl web kdysi tvořen? Na druhou stranu, kdo ví, jestli vůbec web někdy býval plně sémantický. 
+
+<h3 id="rozdil">Rozdíl mezi těmito značkami</h3>
+<p>Hlavní rozdíl mezi těmito značkami je ten, že <code>&lt;div&gt;</code> je blokový oddíl a <code>&lt;span&gt;</code> řádkový. To znamená, že když uzavřete část textu do divu, bude text brán jako samostatný odstavec (ale pravý odstavec to pochopitelně není) a před začátkem a na konci ukončí řádek. Narozdíl od značky <code>&lt;span&gt;</code>, která, když bude vložena do textu, tak se nic nestane, text se nebude nijak formátovat, vše zůstane na jednom řádku. Druhý rozdíl, který ovšem souvisí s prvním, je fakt, že <code>&lt;div&gt;</code> může obsahovat další blokové elementy (<code>&lt;p&gt;</code> například), kdežto <code>&lt;span&gt;</code> může obsahovat pouze řádkové prvky (jako třeba <code>&lt;strong&gt;</code>).</p>
+
+<h3 id="rozum">Divy ano, ale s rozumem</h3>
+<p>Takže co z toho všeho plyne? Divy a spany se určitě nepřestanou používat, nedělám si iluze, navíc některé věci prostě bez těchto značek udělat nelze a je přeci jenom lepší použít značku bez sémantického významu než někde vrazit značku, která je na daném místě sémanticky zcela mimo mísu. Tag <code>&lt;span&gt;</code> se v některých situacích dá nahradit značkou <code>&lt;font&gt;</code>, místo používání <code>&lt;div id="<font class="text">obsah</font>"&gt;</code> můžete zkusit nastylovat značku <code>&lt;body&gt;</code> a podobně. Možnosti existují, jen je využít.</p>
+
+<h3 id="dalsi">Další nesémantické značky</h3>
+<p>Přehled všech nesémantických značek, které byste tudíž neměli používat příliš často, ideálně vůbec:</p>
+<ul>
+<li><code>&lt;u&gt;</code> (ovšem s trochou fantazie lze použít obdobně jako <code>&lt;b&gt;</code>)</li>
+<li><code>&lt;tt&gt;</code></li>
+<li><code>&lt;s&gt;</code></li>
+<li><code>&lt;strike&gt;</code></li>
+<li><code>&lt;small&gt;</code></li>
+<li><code>&lt;big&gt;</code></li>
+<li><code>&lt;blink&gt;</code></li>
+<li><code>&lt;marquee&gt;</code></li>
+</ul>
+
+<menu id="hlavni-menu">
+<li><a href="index.html">Hlavní strana</a></li>
+<li><a href="navody.html">Návody</a></li>
+<li><a href="download.html">Download</a></li>
+<li><a href="odkazy-zdroje.html">Odkazy</a></li>
+<li><a href="kontakt.html">Kontakt</a></li>
+</menu>
+
+<p id="odkazy"><a href="formulare.html">&laquo;&laquo; Formuláře</a> <a href="navody.html" id="rozcestnik">&raquo; rozcestník &laquo;</a> <a href="fekalni-styl.html">Fekální styl &raquo;&raquo;</a></p>
+ 
+<p id="paticka"><small>o web se stará Lukáš Havrlant (<a href="kontakt.html">kontakt</a>)</small></p>
+
+
+
+  </body>
+</html>
